@@ -1,0 +1,31 @@
+BONUS ?
+
+NORMINETTE !!!
+
+-Si je fais ./push_swap 10 10 il return Error \n Error
+
+-Si je fais ./push_swap ca me return Error alors que ca devrait "not display anything and give the prompt back"
+
+-Si je fais ARG="458 15438 15357 155 2147483647 1 787 559592 168786 6 54 354 4 7 41 68 1 68 5 75 4 64 1981";./push_swap $ARG | ./checker_linux $ARG
+ Ca return: Error
+            Error
+            Error
+
+-Si je fais: valgrind  --leak-check=full --show-leak-kinds=all ./push_swap 5 8 4 6 17 53 
+ J'ai un leak :
+        ==243149== HEAP SUMMARY:
+        ==243149==     in use at exit: 40 bytes in 1 blocks
+        ==243149==   total heap usage: 6 allocs, 5 frees, 240 bytes allocated
+        ==243149== 
+        ==243149== 40 bytes in 1 blocks are definitely lost in loss record 1 of 1
+        ==243149==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+        ==243149==    by 0x4014FC: append_node (stack_initialisation.c:43)
+        ==243149==    by 0x401350: init_stack_a (stack_initialisation.c:75)
+        ==243149==    by 0x401230: main (main.c:32)
+        ==243149== 
+        ==243149== LEAK SUMMARY:
+        ==243149==    definitely lost: 40 bytes in 1 blocks
+        ==243149==    indirectly lost: 0 bytes in 0 blocks
+        ==243149==      possibly lost: 0 bytes in 0 blocks
+        ==243149==    still reachable: 0 bytes in 0 blocks
+        ==243149==         suppressed: 0 bytes in 0 blocks
