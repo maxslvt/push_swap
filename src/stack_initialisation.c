@@ -6,7 +6,7 @@
 /*   By: msolet-l <msolet-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:39:24 by msolet-l          #+#    #+#             */
-/*   Updated: 2025/03/13 17:16:27 by msolet-l         ###   ########.fr       */
+/*   Updated: 2025/03/14 18:14:11 by msolet-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	append_node(t_stack_node **stack, int n)
 
 	if (!stack)
 		return (ft_putstr_fd("Error\n", 2));
-	node = malloc(sizeof(t_stack_node));
+	node = ft_calloc(1,sizeof(t_stack_node));
 	if (!node)
 		return (ft_putstr_fd("Error\n", 2));
 	node->next = NULL;

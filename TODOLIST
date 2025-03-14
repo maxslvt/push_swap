@@ -11,6 +11,8 @@ NORMINETTE !!!
             Error
             Error
 
+
+ lldb push_swap 5 8 4 6 17 53  
 -Si je fais: valgrind  --leak-check=full --show-leak-kinds=all ./push_swap 5 8 4 6 17 53 
  J'ai un leak :
         ==243149== HEAP SUMMARY:

@@ -6,7 +6,7 @@
 /*   By: msolet-l <msolet-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 10:56:42 by msolet-l          #+#    #+#             */
-/*   Updated: 2025/03/13 19:06:40 by msolet-l         ###   ########.fr       */
+/*   Updated: 2025/03/14 18:17:56 by msolet-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int						error_duplicate(t_stack_node *a, int n);
 char					**split(char *s, char c);
 
 bool					stack_sorted(t_stack_node *stack);
-void					not_sorted(int len, t_stack_node *a, t_stack_node *b);
+void					not_sorted(int len, t_stack_node **a, t_stack_node **b);
 
 t_stack_node			*get_cheapest(t_stack_node *stack);
 t_stack_node			*find_last(t_stack_node *stack);
